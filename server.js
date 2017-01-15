@@ -2,24 +2,37 @@ var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
 
-const people = [{name: "John", profession: "coder"},
-                {name: "James", profession: "designer"}];
+const data = {airlines: [{name: "BA", flightNumber: "BA101"}, {name: "JAL", flightNumber: "JAL202"}]};
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
+  type Airline {
+    flightNumber: String
+    name: String
+  }
+
   type Query {
-    hello: [String]
-    person(name: String): String
+    airline(name: String): Airline
   }
 `);
 
+class Airline {
+  constructor(name) {
+    this.name = name;
+  }
+  name() {
+    return this.name;
+  }
+  flightNumber() {
+    console.log(data);
+    return data.airlines.find((airline) => airline.name == this.name).flightNumber;
+  }
+}
+
 // The root provides a resolver function for each API endpoint
 var root = {
-  hello: () => {
-    return ['Hello world!', 'Hello all'].map(function(greeting) {return greeting.toUpperCase()});
-  },
-  person: ({name}) => {
-    return people.find(function(person) { return person.name == name }).profession;
+  airline: ({name}) => {
+    return new Airline(name);
   }
 };
 
