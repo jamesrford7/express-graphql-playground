@@ -5,14 +5,16 @@
       "flights": [
         {"number": "BA101"},
         {"number": "BA102"}
-      ]
+      ],
+      "base": "Heathrow"
     },
     {
       "name": "JAL",
       "flights": [
         {"number": "JAL101"},
         {"number": "JAL102"}
-      ]
+      ],
+      "base": "Tokyo"
     }
   ],
   "flights": [

@@ -3,17 +3,23 @@ const { Flight } = require('./flight')
 
 module.exports.Airline = class Airline {
   constructor(name) {
-    this.name = name;
+    this.airlineDetails = data.airlines.find(
+      (airline) => airline.name == name
+    );
   }
 
   name() {
-    return this.name;
+    return this.airlineDetails.name;
+  }
+
+  base() {
+    return this.airlineDetails.base;
   }
 
   flights() {
     let result = [];
     let flights = data.airlines.find(
-      (airline) => airline.name == this.name).flights;
+      (airline) => airline.name == this.airlineDetails.name).flights;
 
     flights.forEach(
       (flight) => result.push(

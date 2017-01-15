@@ -4,6 +4,7 @@ module.exports.schema = buildSchema(`
     type Airline {
       flights: [Flight]
       name: String
+      base: String
     }
 
     type Flight {
