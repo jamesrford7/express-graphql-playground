@@ -1,1 +1,24 @@
-{"airlines": [{"name": "BA", "flightNumber": "BA101"}, {"name": "JAL", "flightNumber": "JAL202"}]}
+{
+  "airlines": [
+    {
+      "name": "BA",
+      "flights": [
+        {"number": "BA101"},
+        {"number": "BA102"}
+      ]
+    },
+    {
+      "name": "JAL",
+      "flights": [
+        {"number": "JAL101"},
+        {"number": "JAL102"}
+      ]
+    }
+  ],
+  "flights": [
+    {"number": "JAL101", "destination": "Sydney", "cost": 200},
+    {"number": "JAL102", "destination": "Manchester", "cost": 300},
+    {"number": "BA101", "destination": "Tokyo", "cost": 400},
+    {"number": "BA102", "destination": "Paris", "cost": 500}
+  ]
+}
