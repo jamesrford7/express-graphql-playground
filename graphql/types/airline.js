@@ -1,4 +1,4 @@
-const data = require('../data/data.json');
+const data = require('../../data/data.json');
 
 module.exports.Airline = class Airline {
   constructor(name) {

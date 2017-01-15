@@ -1,5 +1,5 @@
-const { root } = require('../resolvers/root');
-const { schema } = require('../schema/schema');
+const { root } = require('./resolvers/root');
+const { schema } = require('./schema/schema');
 
 module.exports.graphqlConfig = {
   schema: schema,
