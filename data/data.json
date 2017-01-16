@@ -15,12 +15,22 @@
         {"number": "JAL102"}
       ],
       "base": "Tokyo"
+    },
+    {
+      "name": "QANTAS",
+      "flights": [
+        {"number": "QA101"},
+        {"number": "QA102"}
+      ],
+      "base": "Melbourne"
     }
   ],
   "flights": [
     {"number": "JAL101", "destination": "Sydney", "cost": 200},
     {"number": "JAL102", "destination": "Manchester", "cost": 300},
     {"number": "BA101", "destination": "Tokyo", "cost": 400},
-    {"number": "BA102", "destination": "Paris", "cost": 500}
+    {"number": "BA102", "destination": "Paris", "cost": 500},
+    {"number": "QA101", "destination": "Perth", "cost": 450},
+    {"number": "QA102", "destination": "Dublin", "cost": 550}
   ]
 }
